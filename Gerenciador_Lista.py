@@ -47,16 +47,12 @@ class Gerenciaar:
             print("Nenhum celular para eliminar")
             return 
         self.listar_cell()
-        indice=input("Digite o numero do celular que deseja eliminar: ")
-        if indice.isdigit()
-        indide=int(indice)
-            if 1<=indice <=len(self.lista):
-               removido=self.lista.pop(indice-1)
+        indice=int(input("Digite o numero do celular que deseja eliminar: "))
+        if 1<=indice <=len(self.lista):
+            removido=self.lista.pop(indice-1)
             print(f"\nCelular '{removido.marca} {removido.modelo}' removido com sucesso")
-            else:
-                print("\n Numero invalido..")
         else:
-            print("\n Entrada invalida. Apenas numeros.\n")
+            print("\n Numero invalido..")
 
 def menu():
     Gerenciaar_cell=Gerenciaar()
