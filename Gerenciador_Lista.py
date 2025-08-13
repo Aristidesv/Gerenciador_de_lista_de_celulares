@@ -42,6 +42,21 @@ class Gerenciaar:
         for i , celular in enumerate(self.lista, start=1):
             print(f"{i}. {celular}")
         print()
+    def eliminar_celular(self):
+        if not self.lista:
+            print("Nenhum celular para eliminar")
+            return 
+        self.listar_cell()
+        indice=input("Digite o numero do celular que deseja eliminar: ")
+        if indice.isdigit()
+        indide=int(indice)
+            if 1<=indice <=len(self.lista):
+               removido=self.lista.pop(indice-1)
+            print(f"\nCelular '{removido.marca} {removido.modelo}' removido com sucesso")
+            else:
+                print("\n Numero invalido..")
+        else:
+            print("\n Entrada invalida. Apenas numeros.\n")
 
 def menu():
     Gerenciaar_cell=Gerenciaar()
@@ -50,7 +65,8 @@ def menu():
         print ("++MENU++")
         print("1.Cadastrar celular ")
         print("2.Listar celular")
-        print("3.Sair")
+        print("3.Eliminar celular")
+        print("4.Sair")
 
         op=input("Escoljha a opcao: ")
 
@@ -59,6 +75,8 @@ def menu():
         elif op=="2":
             Gerenciaar_cell.listar_cell()
         elif op=="3":
+            Gerenciaar_cell.eliminar_celular()
+        elif op=="4":
             print("saindo....")
             break
         else:
